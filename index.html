@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내 웹앱</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- iOS에서 앱처럼 보이게 설정 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+  <!-- 여기에 URL이 표시됩니다 -->
+  <iframe 
+    src="http://legna227.ipdisk.co.kr:7722/lhe_work/kiosk" 
+    style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0;"
+  ></iframe>
+  
+  <script>
+    // PWA 설치를 위한 서비스 워커 등록
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('서비스 워커 등록 완료'))
+        .catch(err => console.log('에러:', err));
+    }
+  </script>
+</body>
+</html>
