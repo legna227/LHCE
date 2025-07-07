@@ -1,5 +1,5 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "frame-ancestors 'self' http://legna227.ipdisk.co.kr:7722/"
-    X-Frame-Options = "ALLOW-FROM http://legna227.ipdisk.co.kr:7722/"
+    Content-Security-Policy = "frame-ancestors 'self' http://legna227.ipdisk.co.kr:7722"
+    X-Frame-Options = "ALLOW-FROM http://legna227.ipdisk.co.kr:7722"
